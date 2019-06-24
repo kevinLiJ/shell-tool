@@ -1,2 +1,4 @@
-branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-echo ${branch}
+#!/bin/bash
+branch=$(git symbolic-ref --short HEAD)
+
+echo $branch
